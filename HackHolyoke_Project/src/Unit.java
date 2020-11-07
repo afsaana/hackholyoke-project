@@ -9,7 +9,7 @@ import javax.swing.JComponent;
  * Superclass that controls the units of numbers, players, and other objects
  * on screen.
  * 
- * @author russelj
+ * @author Afsaana, Alyssa, Jessica
  *
  */
 

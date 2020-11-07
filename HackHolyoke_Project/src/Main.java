@@ -17,7 +17,7 @@ import javax.swing.Timer;
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		StartScreen start = new StartScreen("start.png", new JFrame("Joust Game"));
+		StartScreen start = new StartScreen("start.png", new JFrame("Number Nest"));
 		start.run();
 	}
 

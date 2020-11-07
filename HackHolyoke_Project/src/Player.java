@@ -6,14 +6,14 @@ import javax.swing.JFrame;
 /**
  * Class that sets up the Player Unit.
  * 
- * @author russelj
+ * @author Alyssa, Afsaana, Jessica
  *
  */
 
 @SuppressWarnings("serial")
 public class Player extends Unit {
 
-	protected String heroImageName = "Link_transparent.png";
+	protected String PlayerImageName = "Link_transparent.png";
 	protected Rectangle box = new Rectangle();
 	protected int BOX_SIZE = 30;
 	protected JFrame frame;
@@ -34,35 +34,35 @@ public class Player extends Unit {
 	public void moveRight(int num) {
 		curRightV = num;
 		if(curUpV == 0)
-			heroImageName = "Link_right.png";
+			PlayerImageName = "Link_right.png";
 		else
-			heroImageName = "Link_leap_right.png";
+			PlayerImageName = "Link_leap_right.png";
 		isRight = true;
 	}
 	
 	public void moveLeft(int num) {
 		curLeftV = num;
 		if(curUpV == 0)
-			heroImageName = "Link_transparent.png";
+			PlayerImageName = "Link_transparent.png";
 		else
-			heroImageName = "Link_leap.png";
+			PlayerImageName = "Link_leap.png";
 		isRight = false;
 	}
 
 	public void moveUp(int num) {
 		curUpV = num;
 		if(isRight)
-			heroImageName = "Link_leap_right.png";
+			PlayerImageName = "Link_leap_right.png";
 		else
-			heroImageName = "Link_leap.png";
+			PlayerImageName = "Link_leap.png";
 	}
 
 	public void updatePosition() {
 		if(curUpV == 0) {
 			if(isRight)
-				heroImageName = "Link_slash_right.png";
+				PlayerImageName = "Link_slash_right.png";
 			else
-				heroImageName = "Link_slash.png";
+				PlayerImageName = "Link_slash.png";
 		}
 		x += curRightV - curLeftV;
 		if (getX() < 0)
