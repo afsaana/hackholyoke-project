@@ -22,8 +22,10 @@ public class Main {
 	}
 
 	public static void runGame() throws FileNotFoundException{
-		// TODO Auto-generated method stub
-		
+		JFrame frame = new JFrame("Number Nest");
+		frame.setSize(1200, 952);
+		NumberGameComponent component = new NumberGameComponent(frame);
+		frame.add(component);
 	}
 	
 }
