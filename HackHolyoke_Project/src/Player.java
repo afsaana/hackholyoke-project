@@ -24,6 +24,7 @@ public class Player extends Unit {
 	protected int curUpV = 0;
 	protected int curLeftV = 0;
 	protected int curRightV = 0;
+	protected int curFallingV = 2;
 	protected boolean isRight = true;
 	protected boolean isDead = false;
 	
@@ -61,6 +62,10 @@ public class Player extends Unit {
 		else
 			PlayerImageName = "Bird Player.png";
 	}
+	
+	public int setFallingVelocity(int change) {
+		return curFallingV = change;
+	}
 
 	public void updatePosition() {
 		if(curUpV == 0) {
@@ -69,6 +74,7 @@ public class Player extends Unit {
 			else
 				PlayerImageName = "Bird Player.png";
 		}
+		y -= curUpV - curFallingV;
 		x += curRightV - curLeftV;
 		if (getX() < 0)
 			this.x = this.frame.getWidth();

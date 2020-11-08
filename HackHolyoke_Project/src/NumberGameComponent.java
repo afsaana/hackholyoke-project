@@ -75,14 +75,49 @@ public class NumberGameComponent extends JComponent {
 		if (p.getY() > this.frame.getHeight())
 			p.die();
 		if (levels.size() != 0) {
+			for (LevelBlock b : levels.get(currentlevel).getBlocks()) {
+				if (p.getBounds().intersects(b.getBounds())) {
+					b.collidingBottom(p);
+					b.collidingTop(p);
+					b.collidingLeft(p);
+					b.collidingRight(p);
+				}
 //			if (currentlevel == levels.size() - 1 && stop == false) {
 //				stop = true;
 ////					StartScreen win = new StartScreen("winner.png", frame);
 ////					win.run();
 //				frame.dispose();
 //			}
-			this.changeLevel(1);
+			}
 		}
+		p.updatePosition();
+//		if (p.getY() > this.frame.getHeight())
+//			p.die();
+//		p.setFallingVelocity(2);
+//		handleCollisions();
+////		if (levels.size() != 0) {
+////			if (levels.get(currentlevel).getEnemies().size() == 0 && eggs.size() == 0) {
+////			if (currentlevel == levels.size() - 1 && stop == false) {
+////				stop = true;
+//////				StartScreen win = new StartScreen("winner.png", frame);
+//////				win.run();
+////				frame.dispose();
+////			}
+////			this.changeLevel(1);
+////			}
+////		}
+	}
+
+	public void handleCollisions() {
+//		for (Enemy e : enemies) {
+//			if (h.getBounds().intersects(e.getBounds())) {
+//				if (h.getY() < e.getCenterY()) {
+//					score.addScore(100);
+//					enemiesToRemove.add(e);
+//					eggs.add(new Egg(e.x, e.y));
+//				}
+//			}
+//		}
 	}
 
 	public void addLevel(Level l) {
