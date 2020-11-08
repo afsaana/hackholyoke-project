@@ -91,21 +91,21 @@ public class NumberGameComponent extends JComponent {
 			}
 		}
 		p.updatePosition();
-//		if (p.getY() > this.frame.getHeight())
-//			p.die();
-//		p.setFallingVelocity(2);
-//		handleCollisions();
-////		if (levels.size() != 0) {
-////			if (levels.get(currentlevel).getEnemies().size() == 0 && eggs.size() == 0) {
-////			if (currentlevel == levels.size() - 1 && stop == false) {
-////				stop = true;
-//////				StartScreen win = new StartScreen("winner.png", frame);
-//////				win.run();
-////				frame.dispose();
-////			}
-////			this.changeLevel(1);
-////			}
-////		}
+		if (p.getY() > this.frame.getHeight())
+			p.die();
+		p.setFallingVelocity(2);
+		handleCollisions();
+		if (levels.size() != 0) {
+//			if (levels.get(currentlevel).getEnemies().size() == 0 && eggs.size() == 0) {
+//			if (currentlevel == levels.size() - 1 && stop == false) {
+//				stop = true;
+////				StartScreen win = new StartScreen("winner.png", frame);
+////				win.run();
+//				frame.dispose();
+//			}
+//			this.changeLevel(1);
+//			}
+		}
 	}
 
 	public void handleCollisions() {
