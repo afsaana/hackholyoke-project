@@ -19,7 +19,7 @@ public class Player extends Unit {
 
 	protected String PlayerImageName = "Bird Player.png";
 	protected Rectangle box = new Rectangle();
-	protected int BOX_SIZE = 30;
+	protected int BOX_SIZE = 70;
 	protected JFrame frame;
 	protected int curUpV = 0;
 	protected int curLeftV = 0;
@@ -33,8 +33,8 @@ public class Player extends Unit {
 	}
 
 	public void ResetPosition() {
-		x = 400;
-		y = 500;
+		x = 350;
+		y = 400;
 	}
 
 	public void moveRight(int num) {

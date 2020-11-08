@@ -23,7 +23,7 @@ public class Main {
 
 	public static void runGame() throws FileNotFoundException{
 		JFrame frame = new JFrame("Number Nest");
-		frame.setSize(1200, 952);
+		frame.setSize(800, 635);
 		NumberGameComponent component = new NumberGameComponent(frame);
 		frame.add(component);
 		GameAdvanceListener advanceListener = new GameAdvanceListener(component);

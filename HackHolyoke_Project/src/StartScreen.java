@@ -30,7 +30,7 @@ public class StartScreen {
 
 		frame.setVisible(true);
 		frame.pack();
-		frame.setSize(1200, 952);
+		frame.setSize(800, 635);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
