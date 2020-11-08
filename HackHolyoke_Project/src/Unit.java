@@ -9,6 +9,8 @@ import javax.swing.JComponent;
  * Superclass that controls the units of numbers, players, and other objects
  * on screen.
  * 
+ * Specifically, this affects how they are drawn and moved.
+ * 
  * @author Afsaana, Alyssa, Jessica
  *
  */

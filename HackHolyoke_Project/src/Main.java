@@ -26,6 +26,21 @@ public class Main {
 		frame.setSize(1200, 952);
 		NumberGameComponent component = new NumberGameComponent(frame);
 		frame.add(component);
+		GameAdvanceListener advanceListener = new GameAdvanceListener(component);
+		Timer timer = new Timer(10, advanceListener);
+		timer.start();
+
+		Player player = new Player(frame, timer);
+		component.addPlayer(player);
+		
+		Level lvl1 = new Level("Level1.txt", frame, player);
+		component.addLevel(lvl1);
+		KeyListener key = new GameKeyListener(component);
+		frame.addKeyListener(key);
+		
+		frame.setResizable(false);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 }
